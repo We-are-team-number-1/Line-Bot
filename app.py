@@ -113,22 +113,12 @@ def index():
                                                      ))
 
                 # ================== 天氣查詢-地震 ==================
-                # elif text == '地震':
-                #     itt = Weather.get_equake()
-                #     logger.info("itt")
-                #     eqa_info = Weather.eq_info(itt)
-                #     logger.info("itt2")
-                #     line_bot_api.reply_message(
-                #         replyToken, TextSendMessage(text=eqa_info))
-
-                #     payload["messages"] = [{
-                #         "type": "text",
-                #     }]
-
-                # elif text == 'eq':
-                #     payload["messages"] = [{"type": "text",
-                #                             "text": Weather.get_earth_quake()}]
-
+                elif text == '地震' or text == '地震查詢':
+                    u = get_eq_pic()
+                    line_bot_api.reply_message(
+                        replyToken, ImageSendMessage(original_content_url=u,
+                                                     preview_image_url=u
+                                                     ))
                 # ================== 天氣查詢-顯示天氣預報 ==================
                 elif text in key_city:
                     if text[0] == '台':
