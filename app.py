@@ -113,8 +113,8 @@ def index():
                                                      ))
 
                 # ================== 天氣查詢-地震 ==================
-                elif text == '地震' or text == '地震查詢':
-                    u = get_eq_pic()
+                elif text in {'地震', '地震查詢'}:
+                    u = Weather.get_eq_pic()
                     line_bot_api.reply_message(
                         replyToken, ImageSendMessage(original_content_url=u,
                                                      preview_image_url=u
