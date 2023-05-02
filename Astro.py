@@ -9,6 +9,8 @@ all_astros = {"牡羊座": 0, "金牛座": 1, "雙子座": 2, "巨蟹座": 3, "�
 # 這裡是測試
 # 今天5/2整合測試
 
+# 我的測試
+
 
 def reply_astros_table():
     with open("./json/1. astros_list.json", 'r', encoding='utf-8') as f:
