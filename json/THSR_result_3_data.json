@@ -1,0 +1,443 @@
+{
+    "type": "flex",
+    "altText": "this is a flex message",
+    "contents": {
+        "type": "bubble",
+        "size": "mega",
+        "header": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+                {
+                    "type": "box",
+                    "layout": "horizontal",
+                    "contents": [
+                        {
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "Date",
+                                    "color": "#ffffff66",
+                                    "size": "sm"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "2023/04/17",
+                                    "color": "#ffffff",
+                                    "size": "xl",
+                                    "flex": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "Time",
+                                    "color": "#ffffff66",
+                                    "size": "sm"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "14:05",
+                                    "color": "#ffffff",
+                                    "size": "xl",
+                                    "flex": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "box",
+                    "layout": "horizontal",
+                    "contents": [
+                        {
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "FROM",
+                                    "color": "#ffffff66",
+                                    "size": "sm"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "南港站",
+                                    "color": "#ffffff",
+                                    "size": "xl",
+                                    "flex": 4,
+                                    "weight": "bold"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "TO",
+                                    "color": "#ffffff66",
+                                    "size": "sm"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "板橋站",
+                                    "color": "#ffffff",
+                                    "size": "xl",
+                                    "flex": 4,
+                                    "weight": "bold"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "paddingAll": "20px",
+            "backgroundColor": "#e65c00",
+            "spacing": "md",
+            "paddingTop": "22px"
+        },
+        "body": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+                {
+                    "type": "box",
+                    "layout": "horizontal",
+                    "contents": [
+                        {
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "車次 103",
+                                    "align": "center",
+                                    "size": "sm",
+                                    "color": "#FFFFFF"
+                                }
+                            ],
+                            "backgroundColor": "#9D9D9D",
+                            "maxWidth": "80px",
+                            "cornerRadius": "xxl"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "Fastest",
+                                    "size": "xs",
+                                    "color": "#FFFFFF",
+                                    "style": "italic",
+                                    "align": "center"
+                                }
+                            ],
+                            "backgroundColor": "#46A3FF",
+                            "width": "60px",
+                            "background": {
+                                "type": "linearGradient",
+                                "angle": "90deg",
+                                "startColor": "#FFFFFF",
+                                "endColor": "#FFFFFF"
+                            },
+                            "cornerRadius": "xxl",
+                            "offsetStart": "18px"
+                        }
+                    ]
+                },
+                {
+                    "type": "box",
+                    "layout": "horizontal",
+                    "contents": [
+                        {
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "18:16",
+                                    "size": "xxl",
+                                    "align": "center"
+                                }
+                            ],
+                            "flex": 1
+                        },
+                        {
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                                {
+                                    "type": "image",
+                                    "size": "50px",
+                                    "url": "https://github.com/harveytuan23/LineBot/blob/main/static/right-arrow-2.png?raw=true",
+                                    "position": "relative",
+                                    "align": "center",
+                                    "aspectMode": "cover",
+                                    "aspectRatio": "5.98:1",
+                                    "margin": "10px"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "30 min",
+                                    "color": "#6C6C6C",
+                                    "size": "xs",
+                                    "align": "center",
+                                    "margin": "3px"
+                                }
+                            ],
+                            "flex": 1
+                        },
+                        {
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "18:25",
+                                    "size": "xxl",
+                                    "align": "center"
+                                }
+                            ],
+                            "flex": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [],
+                    "borderColor": "#E0E0E0",
+                    "borderWidth": "normal",
+                    "margin": "lg",
+                    "paddingAll": "none"
+                },
+                {
+                    "type": "box",
+                    "layout": "horizontal",
+                    "contents": [
+                        {
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "車次 103",
+                                    "align": "center",
+                                    "size": "sm",
+                                    "color": "#FFFFFF"
+                                }
+                            ],
+                            "backgroundColor": "#9D9D9D",
+                            "maxWidth": "80px",
+                            "cornerRadius": "xxl"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "Fastest",
+                                    "size": "xs",
+                                    "color": "#FFFFFF",
+                                    "style": "italic",
+                                    "align": "center"
+                                }
+                            ],
+                            "backgroundColor": "#46A3FF",
+                            "width": "60px",
+                            "background": {
+                                "type": "linearGradient",
+                                "angle": "90deg",
+                                "startColor": "#FFFFFF",
+                                "endColor": "#FFFFFF"
+                            },
+                            "cornerRadius": "xxl",
+                            "offsetStart": "18px"
+                        }
+                    ],
+                    "margin": "lg"
+                },
+                {
+                    "type": "box",
+                    "layout": "horizontal",
+                    "contents": [
+                        {
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "18:16",
+                                    "size": "xxl",
+                                    "align": "center"
+                                }
+                            ],
+                            "flex": 1
+                        },
+                        {
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                                {
+                                    "type": "image",
+                                    "size": "50px",
+                                    "url": "https://github.com/harveytuan23/LineBot/blob/main/static/right-arrow-2.png?raw=true",
+                                    "position": "relative",
+                                    "align": "center",
+                                    "aspectMode": "cover",
+                                    "aspectRatio": "5.98:1",
+                                    "margin": "10px"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "30 min",
+                                    "color": "#6C6C6C",
+                                    "size": "xs",
+                                    "align": "center",
+                                    "margin": "3px"
+                                }
+                            ],
+                            "flex": 1
+                        },
+                        {
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "18:25",
+                                    "size": "xxl",
+                                    "align": "center"
+                                }
+                            ],
+                            "flex": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [],
+                    "borderColor": "#E0E0E0",
+                    "borderWidth": "normal",
+                    "margin": "lg",
+                    "paddingAll": "none"
+                },
+                {
+                    "type": "box",
+                    "layout": "horizontal",
+                    "contents": [
+                        {
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "車次 103",
+                                    "align": "center",
+                                    "size": "sm",
+                                    "color": "#FFFFFF"
+                                }
+                            ],
+                            "backgroundColor": "#9D9D9D",
+                            "maxWidth": "80px",
+                            "cornerRadius": "xxl"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "Fastest",
+                                    "size": "xs",
+                                    "color": "#FFFFFF",
+                                    "style": "italic",
+                                    "align": "center"
+                                }
+                            ],
+                            "backgroundColor": "#46A3FF",
+                            "width": "60px",
+                            "background": {
+                                "type": "linearGradient",
+                                "angle": "90deg",
+                                "startColor": "#FFFFFF",
+                                "endColor": "#FFFFFF"
+                            },
+                            "cornerRadius": "xxl",
+                            "offsetStart": "18px"
+                        }
+                    ],
+                    "margin": "lg"
+                },
+                {
+                    "type": "box",
+                    "layout": "horizontal",
+                    "contents": [
+                        {
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "18:16",
+                                    "size": "xxl",
+                                    "align": "center"
+                                }
+                            ],
+                            "flex": 1
+                        },
+                        {
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                                {
+                                    "type": "image",
+                                    "size": "50px",
+                                    "url": "https://github.com/harveytuan23/LineBot/blob/main/static/right-arrow-2.png?raw=true",
+                                    "position": "relative",
+                                    "align": "center",
+                                    "aspectMode": "cover",
+                                    "aspectRatio": "5.98:1",
+                                    "margin": "10px"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "30 min",
+                                    "color": "#6C6C6C",
+                                    "size": "xs",
+                                    "align": "center",
+                                    "margin": "3px"
+                                }
+                            ],
+                            "flex": 1
+                        },
+                        {
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "18:25",
+                                    "size": "xxl",
+                                    "align": "center"
+                                }
+                            ],
+                            "flex": 1
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "type": "template",
+    "altText": "請選擇要查詢的時段",
+    "template": {
+        "type": "buttons",
+        "imageAspectRatio": "rectangle",
+        "imageSize": "cover",
+        "imageBackgroundColor": "#FFFFFF",
+        "title": "選擇要查詢的時段",
+        "text": "選擇後將為您提供相關運勢",
+        "defaultAction": {
+            "type": "uri",
+            "label": "View detail",
+            "uri": "http://example.com/page/123"
+        },
+        "actions": [
+            {
+                "type": "postback",
+                "label": "今日",
+                "data": "TM&今日"
+            },
+            {
+                "type": "postback",
+                "label": "明日",
+                "data": "TM&明日"
+            },
+            {
+                "type": "postback",
+                "label": "本周",
+                "data": "TM&本周"
+            },
+            {
+                "type": "postback",
+                "label": "本月",
+                "data": "TM&本月"
+            }
+        ]
+    }
+}

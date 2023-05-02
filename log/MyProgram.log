@@ -1,0 +1,4 @@
+[INFO][2023-05-02 14:06:09][LINE:336][app]: {"message":"The request body has 1 error(s)","details":[{"message":"May not be empty","property":"messages"}]}
+[INFO][2023-05-02 14:06:12][LINE:336][app]: {}
+[INFO][2023-05-02 14:06:15][LINE:336][app]: {}
+[INFO][2023-05-02 14:06:21][LINE:336][app]: {"message":"The request body has 1 error(s)","details":[{"message":"May not be empty","property":"messages"}]}

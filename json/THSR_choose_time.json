@@ -1,0 +1,38 @@
+{
+    "type": "flex",
+    "altText": "This is a fles template",
+    "contents": {
+        "type": "bubble",
+        "body": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+                {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                        {
+                            "type": "text",
+                            "text": "請選擇時間",
+                            "color": "#FFFFFF",
+                            "size": "lg",
+                            "flex": 1,
+                            "action": {
+                                "type": "datetimepicker",
+                                "label": "action",
+                                "data": "chooseTime",
+                                "mode": "datetime",
+                                "initial": "2023-04-11t08:00"
+                            },
+                            "align": "center"
+                        }
+                    ],
+                    "backgroundColor": "#e65c00",
+                    "flex": 5,
+                    "cornerRadius": "sm",
+                    "paddingAll": "lg"
+                }
+            ]
+        }
+    }
+}

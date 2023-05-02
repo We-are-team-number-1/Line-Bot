@@ -1,0 +1,375 @@
+{
+    "type": "flex",
+    "altText": "星座運勢結果",
+    "contents": {
+        "type": "bubble",
+        "body": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+                {
+                    "type": "text",
+                    "text": {re
+                    },
+                    "weight": "bold",
+                    "size": "xl"
+                },
+                {
+                    "type": "box",
+                    "layout": "vertical",
+                    "margin": "20px",
+                    "spacing": "sm",
+                    "contents": [
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "none",
+                            "contents": [
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "牡羊座",
+                                            "color": "#000000",
+                                            "size": "16px",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "牡羊座",
+                                                "data": "AS&牡羊座"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#E2E4E9",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
+                                },
+                                {
+                                    "type": "filler",
+                                    "flex": 1
+                                },
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "金牛座",
+                                            "size": "16px",
+                                            "color": "#000000",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "AS&金牛座"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#E2E4E9",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "none",
+                            "contents": [
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "雙子座",
+                                            "color": "#000000",
+                                            "size": "16px",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "AS&雙子座"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#E2E4E9",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
+                                },
+                                {
+                                    "type": "filler",
+                                    "flex": 1
+                                },
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "巨蟹座",
+                                            "color": "#000000",
+                                            "size": "16px",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "AS&巨蟹座"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#E2E4E9",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
+                                }
+                            ],
+                            "margin": "lg"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "none",
+                            "contents": [
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "獅子座",
+                                            "color": "#000000",
+                                            "size": "16px",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "AS&獅子座"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#E2E4E9",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
+                                },
+                                {
+                                    "type": "filler",
+                                    "flex": 1
+                                },
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "處女座",
+                                            "color": "#000000",
+                                            "size": "16px",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "AS&處女座"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#E2E4E9",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
+                                }
+                            ],
+                            "margin": "lg"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "none",
+                            "contents": [
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "天秤座",
+                                            "color": "#000000",
+                                            "size": "16px",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "AS&天秤座"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#E2E4E9",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
+                                },
+                                {
+                                    "type": "filler",
+                                    "flex": 1
+                                },
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "天蠍座",
+                                            "color": "#000000",
+                                            "size": "16px",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "AS&天蠍座"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#E2E4E9",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
+                                }
+                            ],
+                            "margin": "lg"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "none",
+                            "contents": [
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "射手座",
+                                            "color": "#000000",
+                                            "size": "16px",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "AS&射手座"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#E2E4E9",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
+                                },
+                                {
+                                    "type": "filler",
+                                    "flex": 1
+                                },
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "魔羯座",
+                                            "color": "#000000",
+                                            "size": "16px",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "AS&魔羯座"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#E2E4E9",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
+                                }
+                            ],
+                            "margin": "lg"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "none",
+                            "contents": [
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "水瓶座",
+                                            "color": "#000000",
+                                            "size": "16px",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "AS&水瓶座"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#E2E4E9",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
+                                },
+                                {
+                                    "type": "filler",
+                                    "flex": 1
+                                },
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "雙魚座",
+                                            "color": "#000000",
+                                            "size": "16px",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "AS&雙魚座"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#E2E4E9",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
+                                }
+                            ],
+                            "margin": "lg"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

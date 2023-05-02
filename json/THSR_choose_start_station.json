@@ -1,0 +1,422 @@
+{
+    "type": "flex",
+    "altText": "this is flex template",
+    "contents": {
+        "type": "bubble",
+        "body": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+                {
+                    "type": "text",
+                    "text": "請選擇出發站",
+                    "weight": "bold",
+                    "size": "xl"
+                },
+                {
+                    "type": "box",
+                    "layout": "vertical",
+                    "margin": "20px",
+                    "spacing": "sm",
+                    "contents": [
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "sm",
+                            "contents": [
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "南港站",
+                                            "color": "#FFFFFF",
+                                            "size": "lg",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "SS&南港站&NanGang",
+                                                "displayText": "南港站"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#e65c00",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
+                                },
+                                {
+                                    "type": "filler",
+                                    "flex": 1
+                                },
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "台中站",
+                                            "color": "#FFFFFF",
+                                            "size": "lg",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "SS&台中站&TaiZhong",
+                                                "displayText": "台中站"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#e65c00",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg",
+                                    "action": {
+                                        "type": "postback",
+                                        "label": "action",
+                                        "data": "hello",
+                                        "displayText": "台北站"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "sm",
+                            "contents": [
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "台北站",
+                                            "color": "#FFFFFF",
+                                            "size": "lg",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "SS&台北站&TaiPei",
+                                                "displayText": "台北站"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#e65c00",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
+                                },
+                                {
+                                    "type": "filler",
+                                    "flex": 1
+                                },
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "彰化站",
+                                            "color": "#FFFFFF",
+                                            "size": "lg",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "SS&彰化站&ZhangHua",
+                                                "displayText": "彰化站"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#e65c00",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg",
+                                    "action": {
+                                        "type": "postback",
+                                        "label": "action",
+                                        "data": "hello",
+                                        "displayText": "台北站"
+                                    }
+                                }
+                            ],
+                            "margin": "lg"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "sm",
+                            "contents": [
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "板橋站",
+                                            "color": "#FFFFFF",
+                                            "size": "lg",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "SS&板橋站&BanQiao",
+                                                "displayText": "板橋站"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#e65c00",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
+                                },
+                                {
+                                    "type": "filler",
+                                    "flex": 1
+                                },
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "雲林站",
+                                            "color": "#FFFFFF",
+                                            "size": "lg",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "SS&雲林站&YunLin",
+                                                "displayText": "雲林站"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#e65c00",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg",
+                                    "action": {
+                                        "type": "postback",
+                                        "label": "action",
+                                        "data": "hello",
+                                        "displayText": "台北站"
+                                    }
+                                }
+                            ],
+                            "margin": "lg"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "sm",
+                            "contents": [
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "桃園站",
+                                            "color": "#FFFFFF",
+                                            "size": "lg",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "SS&桃園站&TaoYuan",
+                                                "displayText": "桃園站"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#e65c00",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
+                                },
+                                {
+                                    "type": "filler",
+                                    "flex": 1
+                                },
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "嘉義站",
+                                            "color": "#FFFFFF",
+                                            "size": "lg",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "SS&嘉義站&JiaYi",
+                                                "displayText": "嘉義站"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#e65c00",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg",
+                                    "action": {
+                                        "type": "postback",
+                                        "label": "action",
+                                        "data": "hello",
+                                        "displayText": "台北站"
+                                    }
+                                }
+                            ],
+                            "margin": "lg"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "sm",
+                            "contents": [
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "新竹站",
+                                            "color": "#FFFFFF",
+                                            "size": "lg",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "SS&新竹站&XinZhu",
+                                                "displayText": "新竹站"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#e65c00",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
+                                },
+                                {
+                                    "type": "filler",
+                                    "flex": 1
+                                },
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "台南站",
+                                            "color": "#FFFFFF",
+                                            "size": "lg",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "SS&台南站&TaiNan",
+                                                "displayText": "台南站"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#e65c00",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg",
+                                    "action": {
+                                        "type": "postback",
+                                        "label": "action",
+                                        "data": "hello",
+                                        "displayText": "台北站"
+                                    }
+                                }
+                            ],
+                            "margin": "lg"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "sm",
+                            "contents": [
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "苗栗站",
+                                            "color": "#FFFFFF",
+                                            "size": "lg",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "SS&苗栗站&MiaoLi",
+                                                "displayText": "苗栗站"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#e65c00",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
+                                },
+                                {
+                                    "type": "filler",
+                                    "flex": 1
+                                },
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "左營站",
+                                            "color": "#FFFFFF",
+                                            "size": "lg",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "SS&左營站&ZuoYing",
+                                                "displayText": "左營站"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#e65c00",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg",
+                                    "action": {
+                                        "type": "postback",
+                                        "label": "action",
+                                        "data": "hello",
+                                        "displayText": "台北站"
+                                    }
+                                }
+                            ],
+                            "margin": "lg"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
