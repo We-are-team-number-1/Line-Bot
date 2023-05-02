@@ -10,7 +10,7 @@ config.read('config.ini')
 line_bot_api = LineBotApi(config.get('line-bot', 'channel_access_token'))
 handler = WebhookHandler(config.get('line-bot', 'channel_secret'))
 
-
+#123
 def get_equake():
     msg = ['找不到地震資訊', 'https://example.com/demo.jpg']            # 預設回傳的訊息
     try:
