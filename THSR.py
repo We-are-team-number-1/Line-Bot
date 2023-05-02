@@ -3,7 +3,7 @@ from datetime import datetime
 import logging
 import os
 import requests
-
+# 測試測試 by gu
 # 1.setup log path and create log directory
 logName = 'MyProgram.log'
 logDir = 'log'
