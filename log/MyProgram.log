@@ -1,2 +1,97 @@
 [INFO][2023-05-02 15:29:53][LINE:336][app]: {"message":"The request body has 1 error(s)","details":[{"message":"May not be empty","property":"messages"}]}
 [INFO][2023-05-02 15:29:58][LINE:336][app]: {}
+[INFO][2023-05-02 15:32:52][LINE:336][app]: {}
+[INFO][2023-05-02 15:32:56][LINE:336][app]: {}
+[INFO][2023-05-02 15:33:00][LINE:256][app]: MiaoLi
+[INFO][2023-05-02 15:33:00][LINE:257][app]: YunLin
+[INFO][2023-05-02 15:33:00][LINE:68][THSR]: MiaoLi
+[INFO][2023-05-02 15:33:00][LINE:69][THSR]: YunLin
+[INFO][2023-05-02 15:33:00][LINE:72][THSR]: Search date : 2023/05/02
+[INFO][2023-05-02 15:33:00][LINE:73][THSR]: Search time : 15:32
+[INFO][2023-05-02 15:33:01][LINE:137][THSR]: [42, 41, 41, 41, 42]
+[INFO][2023-05-02 15:33:01][LINE:139][THSR]: 41
+[INFO][2023-05-02 15:33:02][LINE:336][app]: {}
+[INFO][2023-05-02 15:43:04][LINE:256][app]: MiaoLi
+[INFO][2023-05-02 15:43:04][LINE:257][app]: YunLin
+[INFO][2023-05-02 15:43:04][LINE:68][THSR]: MiaoLi
+[INFO][2023-05-02 15:43:04][LINE:69][THSR]: YunLin
+[INFO][2023-05-02 15:43:04][LINE:72][THSR]: Search date : 2023/05/02
+[INFO][2023-05-02 15:43:04][LINE:73][THSR]: Search time : 15:32
+[INFO][2023-05-02 15:43:05][LINE:137][THSR]: [42, 41, 41, 41, 42]
+[INFO][2023-05-02 15:43:05][LINE:139][THSR]: 41
+[INFO][2023-05-02 15:43:05][LINE:336][app]: {}
+[INFO][2023-05-02 15:43:38][LINE:336][app]: {}
+[INFO][2023-05-02 15:43:40][LINE:336][app]: {}
+[INFO][2023-05-02 15:43:43][LINE:336][app]: {}
+[INFO][2023-05-02 15:43:48][LINE:256][app]: XinZhu
+[INFO][2023-05-02 15:43:48][LINE:257][app]: MiaoLi
+[INFO][2023-05-02 15:43:48][LINE:68][THSR]: XinZhu
+[INFO][2023-05-02 15:43:48][LINE:69][THSR]: MiaoLi
+[INFO][2023-05-02 15:43:48][LINE:72][THSR]: Search date : 2023/05/02
+[INFO][2023-05-02 15:43:48][LINE:73][THSR]: Search time : 15:43
+[INFO][2023-05-02 15:43:50][LINE:137][THSR]: [10, 10, 10, 10, 11]
+[INFO][2023-05-02 15:43:50][LINE:139][THSR]: 10
+[INFO][2023-05-02 15:43:50][LINE:336][app]: {}
+[INFO][2023-05-02 15:44:58][LINE:256][app]: XinZhu
+[INFO][2023-05-02 15:44:58][LINE:257][app]: MiaoLi
+[INFO][2023-05-02 15:44:58][LINE:68][THSR]: XinZhu
+[INFO][2023-05-02 15:44:58][LINE:69][THSR]: MiaoLi
+[INFO][2023-05-02 15:44:58][LINE:72][THSR]: Search date : 2023/05/02
+[INFO][2023-05-02 15:44:58][LINE:73][THSR]: Search time : 15:43
+[INFO][2023-05-02 15:45:00][LINE:137][THSR]: [10, 10, 10, 10, 11]
+[INFO][2023-05-02 15:45:00][LINE:139][THSR]: 10
+[INFO][2023-05-02 15:45:00][LINE:336][app]: {}
+[INFO][2023-05-02 15:46:23][LINE:256][app]: XinZhu
+[INFO][2023-05-02 15:46:23][LINE:257][app]: MiaoLi
+[INFO][2023-05-02 15:46:23][LINE:68][THSR]: XinZhu
+[INFO][2023-05-02 15:46:23][LINE:69][THSR]: MiaoLi
+[INFO][2023-05-02 15:46:23][LINE:72][THSR]: Search date : 2023/05/02
+[INFO][2023-05-02 15:46:23][LINE:73][THSR]: Search time : 15:43
+[INFO][2023-05-02 15:46:25][LINE:137][THSR]: [10, 10, 10, 10, 11]
+[INFO][2023-05-02 15:46:25][LINE:139][THSR]: 10
+[INFO][2023-05-02 15:46:25][LINE:336][app]: {}
+[INFO][2023-05-02 15:47:03][LINE:336][app]: {}
+[INFO][2023-05-02 15:47:06][LINE:336][app]: {}
+[INFO][2023-05-02 15:47:10][LINE:336][app]: {}
+[INFO][2023-05-02 15:47:14][LINE:256][app]: ZuoYing
+[INFO][2023-05-02 15:47:14][LINE:257][app]: YunLin
+[INFO][2023-05-02 15:47:14][LINE:68][THSR]: ZuoYing
+[INFO][2023-05-02 15:47:14][LINE:69][THSR]: YunLin
+[INFO][2023-05-02 15:47:14][LINE:72][THSR]: Search date : 2023/05/02
+[INFO][2023-05-02 15:47:14][LINE:73][THSR]: Search time : 15:47
+[INFO][2023-05-02 15:47:15][LINE:137][THSR]: [46, 46, 46, 46, 46]
+[INFO][2023-05-02 15:47:15][LINE:139][THSR]: 46
+[INFO][2023-05-02 15:47:15][LINE:336][app]: {}
+[INFO][2023-05-02 15:53:57][LINE:336][app]: {}
+[INFO][2023-05-02 15:53:59][LINE:336][app]: {}
+[INFO][2023-05-02 15:54:02][LINE:336][app]: {}
+[INFO][2023-05-02 15:54:09][LINE:256][app]: MiaoLi
+[INFO][2023-05-02 15:54:09][LINE:257][app]: TaiZhong
+[INFO][2023-05-02 15:54:09][LINE:68][THSR]: MiaoLi
+[INFO][2023-05-02 15:54:09][LINE:69][THSR]: TaiZhong
+[INFO][2023-05-02 15:54:09][LINE:72][THSR]: Search date : 2023/05/02
+[INFO][2023-05-02 15:54:09][LINE:73][THSR]: Search time : 21:54
+[INFO][2023-05-02 15:54:11][LINE:137][THSR]: [17, 17, 16]
+[INFO][2023-05-02 15:54:11][LINE:139][THSR]: 16
+[INFO][2023-05-02 15:54:11][LINE:336][app]: {}
+[INFO][2023-05-02 16:24:04][LINE:336][app]: {"message":"The request body has 1 error(s)","details":[{"message":"May not be empty","property":"messages"}]}
+[INFO][2023-05-02 16:24:56][LINE:336][app]: {"message":"The request body has 1 error(s)","details":[{"message":"May not be empty","property":"messages"}]}
+[INFO][2023-05-02 16:27:17][LINE:336][app]: {"message":"The request body has 1 error(s)","details":[{"message":"May not be empty","property":"messages"}]}
+[INFO][2023-05-02 16:35:36][LINE:336][app]: {"message":"The request body has 1 error(s)","details":[{"message":"May not be empty","property":"messages"}]}
+[INFO][2023-05-02 16:37:30][LINE:336][app]: {"message":"The request body has 1 error(s)","details":[{"message":"May not be empty","property":"messages"}]}
+[INFO][2023-05-02 16:37:41][LINE:336][app]: {"message":"The request body has 1 error(s)","details":[{"message":"May not be empty","property":"messages"}]}
+[INFO][2023-05-02 16:37:52][LINE:336][app]: {"message":"The request body has 1 error(s)","details":[{"message":"May not be empty","property":"messages"}]}
+[INFO][2023-05-02 16:37:54][LINE:336][app]: {"message":"The request body has 1 error(s)","details":[{"message":"May not be empty","property":"messages"}]}
+[INFO][2023-05-02 16:37:56][LINE:336][app]: {"message":"The request body has 1 error(s)","details":[{"message":"May not be empty","property":"messages"}]}
+[INFO][2023-05-02 16:38:10][LINE:336][app]: {"message":"The request body has 1 error(s)","details":[{"message":"May not be empty","property":"messages"}]}
+[INFO][2023-05-02 16:42:51][LINE:336][app]: {"message":"The request body has 1 error(s)","details":[{"message":"May not be empty","property":"messages"}]}
+[INFO][2023-05-02 16:42:54][LINE:336][app]: {"message":"The request body has 1 error(s)","details":[{"message":"May not be empty","property":"messages"}]}
+[INFO][2023-05-02 16:43:00][LINE:336][app]: {"message":"The request body has 1 error(s)","details":[{"message":"May not be empty","property":"messages"}]}
+[INFO][2023-05-02 16:43:18][LINE:336][app]: {"message":"The request body has 1 error(s)","details":[{"message":"May not be empty","property":"messages"}]}
+[INFO][2023-05-02 16:44:30][LINE:336][app]: {"message":"The request body has 1 error(s)","details":[{"message":"May not be empty","property":"messages"}]}
+[INFO][2023-05-02 16:44:38][LINE:336][app]: {"message":"The request body has 1 error(s)","details":[{"message":"May not be empty","property":"messages"}]}
+[INFO][2023-05-02 16:44:54][LINE:336][app]: {"message":"The request body has 1 error(s)","details":[{"message":"May not be empty","property":"messages"}]}
+[INFO][2023-05-02 16:44:56][LINE:336][app]: {}
+[INFO][2023-05-02 16:44:58][LINE:336][app]: {"message":"The request body has 1 error(s)","details":[{"message":"May not be empty","property":"messages"}]}
+[INFO][2023-05-02 16:52:01][LINE:336][app]: {"message":"The request body has 1 error(s)","details":[{"message":"May not be empty","property":"messages"}]}
+[INFO][2023-05-02 16:53:36][LINE:336][app]: {}

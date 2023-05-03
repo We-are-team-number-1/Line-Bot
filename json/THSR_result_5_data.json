@@ -662,6 +662,36 @@
                             "flex": 1
                         }
                     ]
+                },
+                {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                        {
+                            "type": "text",
+                            "text": "前往訂票",
+                            "size": "lg",
+                            "align": "center",
+                            "color": "#ffffff"
+                        }
+                    ],
+                    "flex": 1,
+                    "backgroundColor": "#e65c00",
+                    "paddingAll": "sm",
+                    "margin": "md",
+                    "action": {
+                        "type": "uri",
+                        "label": "action",
+                        "uri": "https://irs.thsrc.com.tw/IMINT/?utm_source=thsrc&utm_medium=btnlink&utm_term=booking"
+                    }
+                },
+                {
+                    "type": "text",
+                    "text": "資料來源：台灣高鐵",
+                    "align": "center",
+                    "margin": "none",
+                    "offsetTop": "md",
+                    "size": "xs"
                 }
             ]
         }
