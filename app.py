@@ -104,6 +104,25 @@ def index():
                 # ================== 天氣查詢-天氣預報 ==================
                 elif text == "各縣市天氣查詢":
                     payload["messages"] = [Weather.reply_weather_table()]
+                
+                # ================== 餐廳查詢-提醒開啟位置 ==================
+                elif text == "請傳送你的位置資訊":
+                    payload["messages"] = [
+                        {
+                            "type": "text",
+                            "text": "請按發送定位→再按公開的所在位置",
+                            "quickReply": {
+                                "items": [
+                                    {
+                                        "action": {
+                                            "type": "location",
+                                            "label": "位置資訊"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
 
                 # ================== 天氣查詢-雷達 ==================
                 elif text in {'雷達', '雷達回波'}:
@@ -193,23 +212,7 @@ def index():
                     Restaurant.Restaurant(latitude, longitude)]
                 replyMessage(payload)
                 
-                elif text == "請傳送你的位置資訊":
-                    payload["messages"] = [
-                        {
-                            "type": "text",
-                            "text": "請按發送定位→再按公開的所在位置",
-                            "quickReply": {
-                                "items": [
-                                    {
-                                        "action": {
-                                            "type": "location",
-                                            "label": "位置資訊"
-                                        }
-                                    }
-                                ]
-                            }
-                        }
-                    ]
+            
 
         # ============ Message type : Postback ============
         elif events[0]["type"] == "postback":
