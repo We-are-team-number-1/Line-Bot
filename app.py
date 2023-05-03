@@ -103,7 +103,7 @@ def index():
 
                 # ================== 天氣查詢-天氣預報 ==================
                 elif text == "各縣市天氣查詢":
-                    payload["messages"] = [Weather.flx()]
+                    payload["messages"] = [Weather.reply_weather_table()]
 
                 # ================== 天氣查詢-雷達 ==================
                 elif text in {'雷達', '雷達回波'}:
