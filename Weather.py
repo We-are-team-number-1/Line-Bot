@@ -10,61 +10,29 @@ config.read('config.ini')
 line_bot_api = LineBotApi(config.get('line-bot', 'channel_access_token'))
 handler = WebhookHandler(config.get('line-bot', 'channel_secret'))
 
+#123
 
-def get_equake():
-    msg = ['找不到地震資訊', 'https://example.com/demo.jpg']            # 預設回傳的訊息
+def get_eq_pic():
+    msg = ['找不到地震資訊']            # 預設回傳的訊息
     try:
         code = 'CWB-5903F8B2-FC6A-4703-9440-01FDFD7B64B2'
         url = f'https://opendata.cwb.gov.tw/api/v1/rest/datastore/E-A0016-001?Authorization={code}'
         e_data = requests.get(url)                                   # 爬取地震資訊網址
-        # e_data_json = e_data.json()                                  # json 格式化訊息內容
-        # eq = e_data_json['records']['Earthquake']
         eq = (json.loads(e_data.text)
               )['records']['Earthquake']
-        # 取出地震資訊
-        i = 0
-        while (i <= (len(eq))):
-            if (eq[i]["ReportType"] == '地震報告'):
-                it = eq[i]
-                break
-            i += 1
-        return it
-
-    except IndexError:
-        print('you get IndexError: list index out of range')
-        return 'no data'
-
-
-def eq_info(it):
-    info = it["EarthquakeInfo"]
-
-    equ = {}
-    equ[0] = info
-    print(equ)
-    return equ
-
-
-def get_earth_quake():
-    msg = ['找不到地震資訊']            # 預設回傳的訊息
-    try:
-        code = 'CWB-5903F8B2-FC6A-4703-9440-01FDFD7B64B2'
-        url = 'https://opendata.cwb.gov.tw/api/v1/rest/datastore/E-A0016-001?Authorization=CWB-5903F8B2-FC6A-4703-9440-01FDFD7B64B2'
-        e_data = requests.get(url)                                   # 爬取地震資訊網址
-        eq = (json.loads(e_data.text)
-              )['records']['Earthquake']
-
         for i in eq:
-            loc = i['EarthquakeInfo']['EpiCenter']['location']       # 地震地點
-            val = i['EarthquakeInfo']['Magnitude']['magnitudeValue']  # 地震規模
-            dep = i['EarthquakeInfo']['Depth']['value']              # 地震深度
-            eq_time = i['EarthquakeInfo']['OriginTime']              # 地震時間
             img = i['ReportImageURI']                                # 地震圖
-            msg = [f'{loc}，芮氏規模 {val} 級，深度 {dep} 公里，發生時間 {eq_time}。', img]
+            msg = img
             break     # 取出第一筆資料後就 break
         return msg    # 回傳 msg
     except:
         return msg    # 如果取資料有發生錯誤，直接回傳 msg
 
+def reply_weather_table():
+    with open("./json/weather_table.json", 'r', encoding='utf-8') as f:
+        message = json.load(f)
+
+    return message
 
 def flx():
     line_bot_api.push_message('U4482c45b10a321dc59e8602369c3a608', FlexSendMessage(
@@ -818,63 +786,5 @@ def transferWeatherData(item):
         return replyMsg
 
 
-def Confirm_Template():
-    message = {
-        "type": "template",
-        "altText": "confirm template",
-        "template": {
-            "type": "confirm",
-            "text": "想查甚麼時候的天氣呢?",
-            "actions": [
-                {
-                    "type": "message",
-                    "label": "今日天氣",
-                    "text": "今日天氣"
-                },
-                {
-                    "type": "message",
-                    "label": "明日天氣",
-                    "text": "明日天氣"
-                }
 
-            ]
-        }
-    }
-
-    btn = {
-        "type": "template",
-        "altText": "This is a buttons template",
-        "template": {
-            "type": "buttons",
-            "thumbnailImageUrl": "https://example.com/bot/images/image.jpg",
-            "imageAspectRatio": "rectangle",
-            "imageSize": "cover",
-            "imageBackgroundColor": "#FFFFFF",
-            "title": "Menu",
-            "text": "Please select",
-            "defaultAction": {
-                "type": "uri",
-                "label": "View detail",
-                "uri": "http://example.com/page/123"
-            },
-            "actions": [
-                {
-                    "type": "postback",
-                    "label": "Buy",
-                    "data": "action=buy&itemid=123"
-                },
-                {
-                    "type": "postback",
-                    "label": "Add to cart",
-                    "data": "action=add&itemid=123"
-                },
-                {
-                    "type": "uri",
-                    "label": "View detail",
-                    "uri": "http://example.com/page/123"
-                }
-            ]
-        }
-    }
-    return btn
     # return message

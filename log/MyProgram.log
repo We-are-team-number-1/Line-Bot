@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [INFO][2023-05-02 15:29:53][LINE:336][app]: {"message":"The request body has 1 error(s)","details":[{"message":"May not be empty","property":"messages"}]}
 [INFO][2023-05-02 15:29:58][LINE:336][app]: {}
 [INFO][2023-05-02 15:32:52][LINE:336][app]: {}
@@ -95,3 +96,5 @@
 [INFO][2023-05-02 16:44:58][LINE:336][app]: {"message":"The request body has 1 error(s)","details":[{"message":"May not be empty","property":"messages"}]}
 [INFO][2023-05-02 16:52:01][LINE:336][app]: {"message":"The request body has 1 error(s)","details":[{"message":"May not be empty","property":"messages"}]}
 [INFO][2023-05-02 16:53:36][LINE:336][app]: {}
+=======
+>>>>>>> a4b7359dc1228a4135c2506607cd36c5b508aa95

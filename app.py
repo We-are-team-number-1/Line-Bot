@@ -103,7 +103,7 @@ def index():
 
                 # ================== 天氣查詢-天氣預報 ==================
                 elif text == "各縣市天氣查詢":
-                    payload["messages"] = [Weather.flx()]
+                    payload["messages"] = [Weather.reply_weather_table()]
 
                 # ================== 天氣查詢-雷達 ==================
                 elif text in {'雷達', '雷達回波'}:
@@ -113,22 +113,12 @@ def index():
                                                      ))
 
                 # ================== 天氣查詢-地震 ==================
-                # elif text == '地震':
-                #     itt = Weather.get_equake()
-                #     logger.info("itt")
-                #     eqa_info = Weather.eq_info(itt)
-                #     logger.info("itt2")
-                #     line_bot_api.reply_message(
-                #         replyToken, TextSendMessage(text=eqa_info))
-
-                #     payload["messages"] = [{
-                #         "type": "text",
-                #     }]
-
-                # elif text == 'eq':
-                #     payload["messages"] = [{"type": "text",
-                #                             "text": Weather.get_earth_quake()}]
-
+                elif text in {'地震', '地震查詢'}:
+                    u = Weather.get_eq_pic()
+                    line_bot_api.reply_message(
+                        replyToken, ImageSendMessage(original_content_url=u,
+                                                     preview_image_url=u
+                                                     ))
                 # ================== 天氣查詢-顯示天氣預報 ==================
                 elif text in key_city:
                     if text[0] == '台':
@@ -202,6 +192,24 @@ def index():
                 payload["messages"] = [
                     Restaurant.Restaurant(latitude, longitude)]
                 replyMessage(payload)
+                
+                elif text == "請傳送你的位置資訊":
+                    payload["messages"] = [
+                        {
+                            "type": "text",
+                            "text": "請按發送定位→再按公開的所在位置",
+                            "quickReply": {
+                                "items": [
+                                    {
+                                        "action": {
+                                            "type": "location",
+                                            "label": "位置資訊"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
 
         # ============ Message type : Postback ============
         elif events[0]["type"] == "postback":
