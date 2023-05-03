@@ -28,6 +28,11 @@ def get_eq_pic():
     except:
         return msg    # 如果取資料有發生錯誤，直接回傳 msg
 
+def reply_weather_table():
+    with open("./json/weather_table.json", 'r', encoding='utf-8') as f:
+        message = json.load(f)
+
+    return message
 
 def flx():
     line_bot_api.push_message('U4482c45b10a321dc59e8602369c3a608', FlexSendMessage(
