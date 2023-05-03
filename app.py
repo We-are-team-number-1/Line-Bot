@@ -192,6 +192,24 @@ def index():
                 payload["messages"] = [
                     Restaurant.Restaurant(latitude, longitude)]
                 replyMessage(payload)
+                
+                elif text == "請傳送你的位置資訊":
+                    payload["messages"] = [
+                        {
+                            "type": "text",
+                            "text": "請按發送定位→再按公開的所在位置",
+                            "quickReply": {
+                                "items": [
+                                    {
+                                        "action": {
+                                            "type": "location",
+                                            "label": "位置資訊"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
 
         # ============ Message type : Postback ============
         elif events[0]["type"] == "postback":
