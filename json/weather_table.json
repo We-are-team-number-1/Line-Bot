@@ -1,574 +1,374 @@
 {
     "type": "flex",
-    "altText": "天氣查詢",
-    "contents": [
-        {
-            "type": "bubble",
-            "body": {
-                "type": "box",
-                "layout": "vertical",
-                "contents": [
-                    {
-                        "type": "text",
-                        "text": "請選擇想查詢的縣市",
-                        "weight": "bold",
-                        "size": "md",
-                        "decoration": "none",
-                        "align": "center",
-                        "gravity": "top"
-                    },
-                    {
-                        "type": "box",
-                        "layout": "baseline",
-                        "contents": [],
-                        "spacing": "xs",
-                        "margin": "md"
-                    },
-                    {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "contents": [
-                            {
-                                "type": "button",
-                                "action": {
-                                    "type": "message",
-                                    "text": "基隆市天氣",
-                                    "label": "基隆市"
+    "altText": "請選擇星座",
+    "contents": {
+        "type": "bubble",
+        "body": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+                {
+                    "type": "text",
+                    "text": "選擇星座",
+                    "weight": "bold",
+                    "size": "xl"
+                },
+                {
+                    "type": "box",
+                    "layout": "vertical",
+                    "margin": "20px",
+                    "spacing": "sm",
+                    "contents": [
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "none",
+                            "contents": [
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "牡羊座",
+                                            "color": "#000000",
+                                            "size": "16px",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "牡羊座",
+                                                "data": "AS&牡羊座"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#E2E4E9",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
                                 },
-                                "color": "#d3d3d3",
-                                "style": "secondary",
-                                "position": "relative",
-                                "margin": "sm"
-                            },
-                            {
-                                "type": "button",
-                                "action": {
-                                    "type": "message",
-                                    "label": "宜蘭縣",
-                                    "text": "宜蘭縣天氣"
+                                {
+                                    "type": "filler",
+                                    "flex": 1
                                 },
-                                "color": "#d3d3d3",
-                                "style": "secondary",
-                                "position": "relative",
-                                "margin": "sm"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [
-                            {
-                                "type": "separator",
-                                "margin": "sm",
-                                "color": "#ffffff"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "contents": [
-                            {
-                                "type": "button",
-                                "action": {
-                                    "type": "message",
-                                    "label": "臺北市",
-                                    "text": "臺北市天氣"
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "金牛座",
+                                            "size": "16px",
+                                            "color": "#000000",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "AS&金牛座"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#E2E4E9",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "none",
+                            "contents": [
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "雙子座",
+                                            "color": "#000000",
+                                            "size": "16px",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "AS&雙子座"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#E2E4E9",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
                                 },
-                                "color": "#d3d3d3",
-                                "style": "secondary",
-                                "position": "relative",
-                                "margin": "sm"
-                            },
-                            {
-                                "type": "button",
-                                "action": {
-                                    "type": "message",
-                                    "label": "新北市",
-                                    "text": "新北市天氣"
+                                {
+                                    "type": "filler",
+                                    "flex": 1
                                 },
-                                "color": "#d3d3d3",
-                                "style": "secondary",
-                                "position": "relative",
-                                "margin": "sm"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [
-                            {
-                                "type": "separator",
-                                "margin": "sm",
-                                "color": "#ffffff"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "contents": [
-                            {
-                                "type": "button",
-                                "action": {
-                                    "type": "message",
-                                    "label": "桃園市",
-                                    "text": "桃園市天氣"
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "巨蟹座",
+                                            "color": "#000000",
+                                            "size": "16px",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "AS&巨蟹座"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#E2E4E9",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
+                                }
+                            ],
+                            "margin": "lg"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "none",
+                            "contents": [
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "獅子座",
+                                            "color": "#000000",
+                                            "size": "16px",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "AS&獅子座"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#E2E4E9",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
                                 },
-                                "color": "#d3d3d3",
-                                "style": "secondary",
-                                "position": "relative",
-                                "margin": "sm"
-                            },
-                            {
-                                "type": "button",
-                                "action": {
-                                    "type": "message",
-                                    "label": "桃園縣",
-                                    "text": "桃園縣天氣"
+                                {
+                                    "type": "filler",
+                                    "flex": 1
                                 },
-                                "color": "#d3d3d3",
-                                "style": "secondary",
-                                "position": "relative",
-                                "margin": "sm"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [
-                            {
-                                "type": "separator",
-                                "margin": "sm",
-                                "color": "#ffffff"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "contents": [
-                            {
-                                "type": "button",
-                                "action": {
-                                    "type": "message",
-                                    "label": "新竹市",
-                                    "text": "新竹市天氣"
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "處女座",
+                                            "color": "#000000",
+                                            "size": "16px",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "AS&處女座"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#E2E4E9",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
+                                }
+                            ],
+                            "margin": "lg"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "none",
+                            "contents": [
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "天秤座",
+                                            "color": "#000000",
+                                            "size": "16px",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "AS&天秤座"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#E2E4E9",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
                                 },
-                                "color": "#d3d3d3",
-                                "style": "secondary",
-                                "position": "relative",
-                                "margin": "sm"
-                            },
-                            {
-                                "type": "button",
-                                "action": {
-                                    "type": "message",
-                                    "label": "新竹縣",
-                                    "text": "新竹縣天氣"
+                                {
+                                    "type": "filler",
+                                    "flex": 1
                                 },
-                                "color": "#d3d3d3",
-                                "style": "secondary",
-                                "position": "relative",
-                                "margin": "sm"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [
-                            {
-                                "type": "separator",
-                                "margin": "sm",
-                                "color": "#ffffff"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "contents": [
-                            {
-                                "type": "button",
-                                "action": {
-                                    "type": "message",
-                                    "label": "苗栗縣",
-                                    "text": "苗栗縣天氣"
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "天蠍座",
+                                            "color": "#000000",
+                                            "size": "16px",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "AS&天蠍座"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#E2E4E9",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
+                                }
+                            ],
+                            "margin": "lg"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "none",
+                            "contents": [
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "射手座",
+                                            "color": "#000000",
+                                            "size": "16px",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "AS&射手座"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#E2E4E9",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
                                 },
-                                "color": "#d3d3d3",
-                                "style": "secondary",
-                                "position": "relative",
-                                "margin": "sm"
-                            },
-                            {
-                                "type": "button",
-                                "action": {
-                                    "type": "message",
-                                    "label": "臺中市",
-                                    "text": "臺中市天氣"
+                                {
+                                    "type": "filler",
+                                    "flex": 1
                                 },
-                                "color": "#d3d3d3",
-                                "style": "secondary",
-                                "position": "relative",
-                                "margin": "sm"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [
-                            {
-                                "type": "separator",
-                                "margin": "sm",
-                                "color": "#ffffff"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "contents": [
-                            {
-                                "type": "button",
-                                "action": {
-                                    "type": "message",
-                                    "label": "彰化縣",
-                                    "text": "彰化縣天氣"
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "魔羯座",
+                                            "color": "#000000",
+                                            "size": "16px",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "AS&魔羯座"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#E2E4E9",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
+                                }
+                            ],
+                            "margin": "lg"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "none",
+                            "contents": [
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "水瓶座",
+                                            "color": "#000000",
+                                            "size": "16px",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "AS&水瓶座"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#E2E4E9",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
                                 },
-                                "color": "#d3d3d3",
-                                "style": "secondary",
-                                "position": "relative",
-                                "margin": "sm"
-                            },
-                            {
-                                "type": "button",
-                                "action": {
-                                    "type": "message",
-                                    "label": "南投縣",
-                                    "text": "南投縣天氣"
+                                {
+                                    "type": "filler",
+                                    "flex": 1
                                 },
-                                "color": "#d3d3d3",
-                                "style": "secondary",
-                                "position": "relative",
-                                "margin": "sm"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [
-                            {
-                                "type": "separator",
-                                "margin": "sm",
-                                "color": "#ffffff"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "contents": [
-                            {
-                                "type": "button",
-                                "action": {
-                                    "type": "message",
-                                    "label": "雲林縣",
-                                    "text": "雲林縣天氣"
-                                },
-                                "color": "#d3d3d3",
-                                "style": "secondary",
-                                "position": "relative",
-                                "margin": "sm"
-                            },
-                            {
-                                "type": "button",
-                                "action": {
-                                    "type": "message",
-                                    "label": "嘉義市",
-                                    "text": "嘉義市天氣"
-                                },
-                                "color": "#d3d3d3",
-                                "style": "secondary",
-                                "position": "relative",
-                                "margin": "sm"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [
-                            {
-                                "type": "separator",
-                                "margin": "sm",
-                                "color": "#ffffff"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "contents": [
-                            {
-                                "type": "button",
-                                "action": {
-                                    "type": "message",
-                                    "label": "嘉義縣",
-                                    "text": "嘉義縣天氣"
-                                },
-                                "color": "#d3d3d3",
-                                "style": "secondary",
-                                "position": "relative",
-                                "margin": "sm"
-                            },
-                            {
-                                "type": "button",
-                                "action": {
-                                    "type": "message",
-                                    "label": "臺南市",
-                                    "text": "臺南市天氣"
-                                },
-                                "color": "#d3d3d3",
-                                "style": "secondary",
-                                "position": "relative",
-                                "margin": "sm"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [
-                            {
-                                "type": "separator",
-                                "margin": "sm",
-                                "color": "#ffffff"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "contents": [
-                            {
-                                "type": "button",
-                                "action": {
-                                    "type": "message",
-                                    "label": "高雄市",
-                                    "text": "高雄市天氣"
-                                },
-                                "color": "#d3d3d3",
-                                "style": "secondary",
-                                "position": "relative",
-                                "margin": "sm"
-                            },
-                            {
-                                "type": "button",
-                                "action": {
-                                    "type": "message",
-                                    "label": "屏東縣",
-                                    "text": "屏東縣天氣"
-                                },
-                                "color": "#d3d3d3",
-                                "style": "secondary",
-                                "position": "relative",
-                                "margin": "sm"
-                            }
-                        ]
-                    }
-                ]
-            },
-            "footer": {
-                "type": "box",
-                "layout": "horizontal",
-                "contents": [
-                    {
-                        "type": "button",
-                        "margin": "none",
-                        "height": "sm",
-                        "style": "link",
-                        "color": "#6d6c6c",
-                        "gravity": "bottom",
-                        "action": {
-                            "type": "uri",
-                            "label": "資料來源：中央氣象局",
-                            "uri": "https://www.cwb.gov.tw/V8/C/"
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "雙魚座",
+                                            "color": "#000000",
+                                            "size": "16px",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "postback",
+                                                "label": "action",
+                                                "data": "AS&雙魚座"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#E2E4E9",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
+                                }
+                            ],
+                            "margin": "lg"
                         }
-                    }
-                ]
-            }
-        },
-        {
-            "type": "bubble",
-            "body": {
-                "type": "box",
-                "layout": "vertical",
-                "contents": [
-                    {
-                        "type": "text",
-                        "text": "請選擇想查詢的縣市",
-                        "weight": "bold",
-                        "size": "md",
-                        "decoration": "none",
-                        "align": "center",
-                        "gravity": "top"
-                    },
-                    {
-                        "type": "box",
-                        "layout": "baseline",
-                        "contents": [],
-                        "spacing": "xs",
-                        "margin": "md"
-                    },
-                    {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "contents": [
-                            {
-                                "type": "button",
-                                "action": {
-                                    "type": "message",
-                                    "text": "花蓮縣天氣",
-                                    "label": "花蓮縣"
-                                },
-                                "color": "#d3d3d3",
-                                "style": "secondary",
-                                "position": "relative",
-                                "margin": "sm"
-                            },
-                            {
-                                "type": "button",
-                                "action": {
-                                    "type": "message",
-                                    "label": "臺東縣",
-                                    "text": "臺東縣天氣"
-                                },
-                                "color": "#d3d3d3",
-                                "style": "secondary",
-                                "position": "relative",
-                                "margin": "sm"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [
-                            {
-                                "type": "separator",
-                                "margin": "sm",
-                                "color": "#ffffff"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "contents": [
-                            {
-                                "type": "button",
-                                "action": {
-                                    "type": "message",
-                                    "label": "澎湖縣",
-                                    "text": "澎湖縣天氣"
-                                },
-                                "color": "#d3d3d3",
-                                "style": "secondary",
-                                "position": "relative",
-                                "margin": "sm"
-                            },
-                            {
-                                "type": "button",
-                                "action": {
-                                    "type": "message",
-                                    "label": "金門縣",
-                                    "text": "金門縣天氣"
-                                },
-                                "color": "#d3d3d3",
-                                "style": "secondary",
-                                "position": "relative",
-                                "margin": "sm"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [
-                            {
-                                "type": "separator",
-                                "margin": "sm",
-                                "color": "#ffffff"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "contents": [
-                            {
-                                "type": "button",
-                                "action": {
-                                    "type": "message",
-                                    "label": "連江縣",
-                                    "text": "連江縣天氣"
-                                },
-                                "color": "#d3d3d3",
-                                "style": "secondary",
-                                "position": "relative",
-                                "margin": "sm"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [
-                            {
-                                "type": "separator",
-                                "margin": "sm",
-                                "color": "#ffffff"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [
-                            {
-                                "type": "separator",
-                                "margin": "sm",
-                                "color": "#ffffff"
-                            }
-                        ]
-                    }
-                ]
-            },
-            "footer": {
-                "type": "box",
-                "layout": "horizontal",
-                "contents": [
-                    {
-                        "type": "button",
-                        "margin": "none",
-                        "height": "sm",
-                        "style": "link",
-                        "color": "#6d6c6c",
-                        "gravity": "bottom",
-                        "action": {
-                            "type": "uri",
-                            "label": "資料來源：中央氣象局",
-                            "uri": "https://www.cwb.gov.tw/V8/C/"
-                        }
-                    }
-                ]
-            }
+                    ]
+                }
+            ]
         }
-    ]
+    }
 }
