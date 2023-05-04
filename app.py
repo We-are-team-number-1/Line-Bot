@@ -200,6 +200,16 @@ def index():
 
 
                         ))
+                
+
+                else:
+                    payload["messages"] = [
+                        {
+                            "type": "text",
+                            "text": "請打開選單 → 點選要查詢的資訊"
+                        }
+                    ]
+
                 replyMessage(payload)
 
             # ============ Message type : location ============
