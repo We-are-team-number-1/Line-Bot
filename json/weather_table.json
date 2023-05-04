@@ -1,5 +1,5 @@
 {
-    "type": "carousel",
+    "type": "flex",
     "altText": "天氣查詢",
     "contents": [
         {
