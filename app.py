@@ -104,6 +104,9 @@ def index():
                 # ================== 天氣查詢-天氣預報 ==================
                 elif text == "各縣市天氣查詢":
                     payload["messages"] = [Weather.reply_weather_table()]
+
+                elif text == "天氣查詢":
+                    payload["messages"] = [Weather.reply_weather_table()]                
                 
                 # ================== 餐廳查詢-提醒開啟位置 ==================
                 elif text == "請傳送你的位置資訊":

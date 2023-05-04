@@ -1,5 +1,6 @@
 {
     "type": "carousel",
+    "altText": "天氣查詢",
     "contents": [
         {
             "type": "bubble",
