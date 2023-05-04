@@ -34,6 +34,12 @@ def reply_weather_table():
 
     return message
 
+def reply_weather_table2():
+    with open("./json/weather_table2.json", 'r', encoding='utf-8') as f:
+        message = json.load(f)
+
+    return message
+
 def flx():
     line_bot_api.push_message('U4482c45b10a321dc59e8602369c3a608', FlexSendMessage(
         alt_text='各縣市天氣查詢',

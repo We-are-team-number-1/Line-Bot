@@ -1,0 +1,194 @@
+{
+    "type": "flex",
+    "altText": "請選擇想查詢的縣市",
+    "contents": {
+        "type": "bubble",
+        "body": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+                {
+                    "type": "text",
+                    "text": "請選擇想查詢的縣市",
+                    "weight": "bold",
+                    "size": "md",
+                    "decoration": "none",
+                    "align": "center",
+                    "gravity": "top"
+                },
+                {
+                    "type": "box",
+                    "layout": "vertical",
+                    "margin": "20px",
+                    "spacing": "sm",
+                    "contents": [
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "none",
+                            "contents": [
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "花蓮縣",
+                                            "color": "#000000",
+                                            "size": "16px",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "message",
+                                                "text": "花蓮縣天氣",
+                                                "label": "花蓮縣"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#E2E4E9",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
+                                },
+                                {
+                                    "type": "filler",
+                                    "flex": 1
+                                },
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "臺東縣",
+                                            "size": "16px",
+                                            "color": "#000000",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "message",
+                                                "label": "臺東縣",
+                                                "text": "臺東縣天氣"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#E2E4E9",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "none",
+                            "contents": [
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "澎湖縣",
+                                            "color": "#000000",
+                                            "size": "16px",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "message",
+                                                "label": "澎湖縣",
+                                                "text": "澎湖縣天氣"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#E2E4E9",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
+                                },
+                                {
+                                    "type": "filler",
+                                    "flex": 1
+                                },
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "金門縣",
+                                            "color": "#000000",
+                                            "size": "16px",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "message",
+                                                "label": "金門縣",
+                                                "text": "金門縣天氣"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#E2E4E9",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
+                                }
+                            ],
+                            "margin": "lg"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "spacing": "none",
+                            "contents": [
+                                {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "連江縣",
+                                            "color": "#000000",
+                                            "size": "16px",
+                                            "flex": 1,
+                                            "action": {
+                                                "type": "message",
+                                                "label": "連江縣",
+                                                "text": "連江縣天氣"
+                                            },
+                                            "align": "center"
+                                        }
+                                    ],
+                                    "backgroundColor": "#E2E4E9",
+                                    "flex": 5,
+                                    "cornerRadius": "sm",
+                                    "paddingAll": "lg"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "footer": {
+            "type": "box",
+            "layout": "horizontal",
+            "contents": [
+                {
+                    "type": "button",
+                    "margin": "none",
+                    "height": "sm",
+                    "style": "link",
+                    "color": "#6d6c6c",
+                    "gravity": "bottom",
+                    "action": {
+                        "type": "uri",
+                        "label": "資料來源：中央氣象局",
+                        "uri": "https://www.cwb.gov.tw/V8/C/"
+                    }
+                }
+            ]
+        }
+    }
+}
