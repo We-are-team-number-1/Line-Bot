@@ -172,7 +172,7 @@ def index():
                                         thumbnail_image_url=url,
                                         title='{}'.format(
                                             msg_weaterInfo[0]),
-                                        text='天氣狀況： \t\t{}\n舒適度： \t\t{}\n溫度： \t\t{}°C \t\t至 \t\t{}°C \n降雨機率： \t\t{}%\n{}{}{}'.format(
+                                        text='天氣狀況： \t\t{:>10}\n舒適度： \t\t{:>10}\n溫度： \t\t{:>10}°C \t\t至 \t\t{:>10}°C \n降雨機率： \t\t{:>10}%\n{}{}{}'.format(
                                             wx[0], ci[0], msg_weaterInfo[
                                                 1], msg_weaterInfo[2], msg_weaterInfo[3], msg_weaterInfo[9], msg_weaterInfo[10], msg_weaterInfo[11]
                                         ),
