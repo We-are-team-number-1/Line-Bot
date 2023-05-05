@@ -1,5 +1,6 @@
 import requests
 import random
+import datetime
 
 GOOGLE_API_KEY = 'AIzaSyCh99R3Y1hnPZ-oP2dxqrnfZgGiZuRuVf0'
 
@@ -52,6 +53,7 @@ def Restaurant(latitude, longitude):
     thumbnail_image_url = []
     details = []
     phone_number = []
+    today = datetime.datetime.today().weekday()
     # details_restaurants = []
     for i in range(len(restaurant5)):
         if restaurant5[i]["photos"] is None:
@@ -79,22 +81,21 @@ def Restaurant(latitude, longitude):
             rating = "無"
         else:
             rating = restaurant5[i]["rating"]
-        # if details_restaurants[i]["address_components"]["formatted_address"] is None:
-        #     address = "沒有資料"
-        # else:
-        #     address = details_restaurants[i]["address_components"]["formatted_address"]
+        
         if restaurant5[i]["vicinity"] is None:
             address = "沒有資料"
         else:
             address = restaurant5[i]["vicinity"]
 
-        if restaurant5[i]["opening_hours"]["open_now"] == True:
-            openhours = "營業中"
-        else:
-            openhours = "休息中"
+        if "weekday_text" in details_dict["result"]["opening_hours"]:
+            today_open_hours = details_dict["result"]["opening_hours"]["weekday_text"][today]
+            today_open_hours = today_open_hours.split(
+                ": ")[1]
+            opening_time = today_open_hours.split(" - ")[0]
+            opening_hours = opening_time
 
-        details.append("評分：{}星\n地址：{}\n營業狀態:{}".format(
-            rating, address,  openhours))
+        details.append("評分：{}星\n地址：{}\n營業時間:{}".format(
+            rating, address,  opening_hours))
 
     # 6. 取得餐廳的 Google map 網址
 
@@ -119,7 +120,7 @@ def Restaurant(latitude, longitude):
                     "thumbnailImageUrl": thumbnail_image_url[0],
                     "imageBackgroundColor": "#FFFFFF",
                     "title": restaurant5[0]['name'][:40],
-                    "text": details[0],
+                    "text": details[0][:60],
                     "actions": [
                         {
                             "type": "uri",
@@ -138,7 +139,7 @@ def Restaurant(latitude, longitude):
                     "thumbnailImageUrl": thumbnail_image_url[1],
                     "imageBackgroundColor": "#FFFFFF",
                     "title": restaurant5[1]['name'][:40],
-                    "text": details[1],
+                    "text": details[1][:60],
                     "actions": [
                         {
                             "type": "uri",
@@ -156,7 +157,7 @@ def Restaurant(latitude, longitude):
                     "thumbnailImageUrl": thumbnail_image_url[2],
                     "imageBackgroundColor": "#FFFFFF",
                     "title": restaurant5[2]['name'][:40],
-                    "text": details[2],
+                    "text": details[2][:60],
                     "actions": [
                         {
                             "type": "uri",
