@@ -3,6 +3,7 @@ from datetime import datetime
 import logging
 import os
 import requests
+import pytz
 
 # 1.setup log path and create log directory
 logName = 'MyProgram.log'
@@ -52,7 +53,7 @@ def THSR_choose_end_station():
 def THSR_choose_time():
     with open("./json/THSR_choose_time.json", 'r', encoding='utf-8') as f:
         message = json.load(f)
-    now_time = datetime.now().strftime("%Y-%m-%dt%H:%M")
+    now_time = datetime.now(pytz.timezone('ROC')).strftime("%Y-%m-%dt%H:%M")
     message["contents"]["body"]["contents"][0]["contents"][0]["action"]["initial"] = now_time
     return message
 
