@@ -35,272 +35,483 @@ def reply_result_message():
         reply_message = f"【{time_selection}{your_astro}運勢】\n"
 
         # 今日
-        if time_selection == "今日":
-            url = f"https://astro.click108.com.tw/daily_{astro_id}.php?iAcDay={today}&iAstro={astro_id}&iType=0"
+        if time_selection == "今日" or time_selection == "明日":
+            # 今日
+            if time_selection == "今日":
+                url = f"https://astro.click108.com.tw/daily_{astro_id}.php?iAcDay={today}&iAstro={astro_id}&iType=0"
 
-            response = requests.get(url)
-            response.encoding = "utf-8"
-            soup = BeautifulSoup(response.text, "html.parser")
-            # 子標題
-            overall = soup.find("span", {"class": "txt_green"}).text.strip()
-            love = soup.find("span", {"class": "txt_pink"}).text.strip()
-            career = soup.find("span", {"class": "txt_blue"}).text.strip()
-            finance = soup.find("span", {"class": "txt_orange"}).text.strip()
-            # 子標題內容
-            all_content = soup.find(
-                "div", {"class": "TODAY_CONTENT"})
-            all_p = all_content.find_all('p')
+                response = requests.get(url)
+                response.encoding = "utf-8"
+                soup = BeautifulSoup(response.text, "html.parser")
+                # 子標題
+                overall = soup.find(
+                    "span", {"class": "txt_green"}).text.strip()
+                love = soup.find("span", {"class": "txt_pink"}).text.strip()
+                career = soup.find("span", {"class": "txt_blue"}).text.strip()
+                finance = soup.find(
+                    "span", {"class": "txt_orange"}).text.strip()
+                # 子標題內容
+                lucky_item = soup.find("div", {"class": "TODAY_LUCKY"})
+                all_h = lucky_item.find_all('h4')
+                lucky_number = all_h[0].text
+                lucky_color = all_h[1].text
 
-            overall_content = all_p[1].text
-            love_content = all_p[3].text
-            career_content = all_p[-3].text
-            finance_content = all_p[-1].text
+                all_content = soup.find(
+                    "div", {"class": "TODAY_CONTENT"})
+                all_p = all_content.find_all('p')
 
-        # 明日
-        elif time_selection == "明日":
-            tomorrow = (datetime.now() + timedelta(days=1)
-                        ).strftime("%Y-%m-%d")
-            url = f"https://astro.click108.com.tw/daily_{astro_id}.php?iAcDay={tomorrow}&iAstro={astro_id}&iType=4"
+                overall_content = all_p[1].text
+                love_content = all_p[3].text
+                career_content = all_p[-3].text
+                finance_content = all_p[-1].text
 
-            response = requests.get(url)
-            response.encoding = "utf-8"
-            soup = BeautifulSoup(response.text, "html.parser")
-            overall = soup.find("span", {"class": "txt_green"}).text.strip()
-            love = soup.find("span", {"class": "txt_pink"}).text.strip()
-            career = soup.find("span", {"class": "txt_blue"}).text.strip()
-            finance = soup.find("span", {"class": "txt_orange"}).text.strip()
-            # 子標題內容
-            all_content = soup.find(
-                "div", {"class": "TODAY_CONTENT"})
-            all_p = all_content.find_all('p')
+                # reply_content += p.text.strip() + '\n'
+                # reply_content = reply_content.rstrip('\n')
 
-            overall_content = all_p[1].text
-            love_content = all_p[3].text
-            career_content = all_p[-3].text
-            finance_content = all_p[-1].text
+            # 明日
+            elif time_selection == "明日":
+                tomorrow = (datetime.now() + timedelta(days=1)
+                            ).strftime("%Y-%m-%d")
+                url = f"https://astro.click108.com.tw/daily_{astro_id}.php?iAcDay={tomorrow}&iAstro={astro_id}&iType=4"
 
-        # 本周
-        elif time_selection == "本周":
-            url = f"https://astro.click108.com.tw/weekly_{astro_id}.php?iAcDay={today}&iAstro={astro_id}&iType=1"
+                response = requests.get(url)
+                response.encoding = "utf-8"
+                soup = BeautifulSoup(response.text, "html.parser")
+                overall = soup.find(
+                    "span", {"class": "txt_green"}).text.strip()
+                love = soup.find("span", {"class": "txt_pink"}).text.strip()
+                career = soup.find("span", {"class": "txt_blue"}).text.strip()
+                finance = soup.find(
+                    "span", {"class": "txt_orange"}).text.strip()
+                # 子標題內容
+                lucky_item = soup.find("div", {"class": "TODAY_LUCKY"})
+                all_h = lucky_item.find_all('h4')
+                lucky_number = all_h[0].text
+                lucky_color = all_h[1].text
 
-            response = requests.get(url)
-            response.encoding = "utf-8"
-            soup = BeautifulSoup(response.text, "html.parser")
-            overall = soup.find("span", {"class": "txt_green"}).text.strip()
-            love = soup.find("span", {"class": "txt_pink"}).text.strip()
-            career = soup.find("span", {"class": "txt_blue"}).text.strip()
-            finance = soup.find("span", {"class": "txt_orange"}).text.strip()
-            # 子標題內容
-            all_content = soup.find(
-                "div", {"class": "TODAY_CONTENT"})
-            all_p = all_content.find_all('p')
+                all_content = soup.find(
+                    "div", {"class": "TODAY_CONTENT"})
+                all_p = all_content.find_all('p')
 
-            overall_content = all_p[1].text
-            love_content = all_p[3].text
-            career_content = all_p[-3].text
-            finance_content = all_p[-1].text
+                overall_content = all_p[1].text
+                love_content = all_p[3].text
+                career_content = all_p[-3].text
+                finance_content = all_p[-1].text
+
+            message = {
+                "type": "flex",
+                "altText": "星座運勢結果",
+                "contents": {
+                    "type": "bubble",
+                    "body": {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [
+                            {
+                                "type": "text",
+                                "text": reply_message,
+                                "weight": "bold",
+                                "size": "xl"
+                            },
+                            {
+                                "type": "box",
+                                "layout": "horizontal",
+                                "spacing": "none",
+                                "margin": "md",
+                                "contents": [
+                                    {
+                                        "type": "box",
+                                        "layout": "vertical",
+                                        "contents": [
+                                            {
+                                                "type": "text",
+                                                "text": " "*2 + "幸運數字：" + lucky_number + " /" + " "+"幸運顏色：" + lucky_color,
+                                                "size": "md",
+                                                "color": "#6012BF",
+                                                "weight": "bold",
+                                                "margin": "xs",
+                                                "flex": 0,
+                                                "wrap": True
+                                            }
+                                        ]
+                                    },
+                                ]
+                            },
+                            {
+                                "type": "box",
+                                "layout": "baseline",
+                                "margin": "md",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": overall,
+                                        "size": "md",
+                                        "color": "#CC7DE6",
+                                        "weight": "bold",
+                                        "margin": "md",
+                                        "flex": 0,
+                                        "wrap": True
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "box",
+                                "layout": "baseline",
+                                "margin": "md",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": overall_content,
+                                        "size": "sm",
+                                        "color": "#3B3B3B",
+                                        "margin": "md",
+                                        "flex": 0,
+                                        "wrap": True
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "box",
+                                "layout": "baseline",
+                                "margin": "md",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": love,
+                                        "size": "md",
+                                        "color": "#CC7DE6",
+                                        "weight": "bold",
+                                        "margin": "md",
+                                        "flex": 0,
+                                        "wrap": True
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "box",
+                                "layout": "baseline",
+                                "margin": "md",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": love_content.rstrip('\n'),
+                                        "size": "sm",
+                                        "color": "#3B3B3B",
+                                        "margin": "md",
+                                        "flex": 0,
+                                        "wrap": True
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "box",
+                                "layout": "baseline",
+                                "margin": "md",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": career,
+                                        "size": "md",
+                                        "color": "#CC7DE6",
+                                        "weight": "bold",
+                                        "margin": "md",
+                                        "flex": 0,
+                                        "wrap": True
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "box",
+                                "layout": "baseline",
+                                "margin": "md",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": career_content.rstrip('\n'),
+                                        "size": "sm",
+                                        "color": "#262626",
+                                        "margin": "md",
+                                        "flex": 0,
+                                        "wrap": True
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "box",
+                                "layout": "baseline",
+                                "margin": "md",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": finance,
+                                        "size": "md",
+                                        "color": "#CC7DE6",
+                                        "weight": "bold",
+                                        "margin": "md",
+                                        "flex": 0,
+                                        "wrap": True
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "box",
+                                "layout": "baseline",
+                                "margin": "md",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": finance_content,
+                                        "size": "sm",
+                                        "color": "#262626",
+                                        "margin": "md",
+                                        "flex": 0,
+                                        "wrap": True
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "box",
+                                "layout": "baseline",
+                                "margin": "md",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "資料來源：科技紫微網",
+                                        "size": "sm",
+                                        "color": "#999999",
+                                        "margin": "md",
+                                        "flex": 0,
+                                        "wrap": True
+                                    }
+                                ]
+                            },
+
+                        ]
+                    }
+                }
+            }
+
+        else:
+            # 本周
+            if time_selection == "本周":
+                url = f"https://astro.click108.com.tw/weekly_{astro_id}.php?iAcDay={today}&iAstro={astro_id}&iType=1"
+
+                response = requests.get(url)
+                response.encoding = "utf-8"
+                soup = BeautifulSoup(response.text, "html.parser")
+                overall = soup.find(
+                    "span", {"class": "txt_green"}).text.strip()
+                love = soup.find("span", {"class": "txt_pink"}).text.strip()
+                career = soup.find("span", {"class": "txt_blue"}).text.strip()
+                finance = soup.find(
+                    "span", {"class": "txt_orange"}).text.strip()
+                # 子標題內容
+                all_content = soup.find(
+                    "div", {"class": "TODAY_CONTENT"})
+                all_p = all_content.find_all('p')
+
+                overall_content = all_p[1].text
+                love_content = all_p[3].text
+                career_content = all_p[-3].text
+                finance_content = all_p[-1].text
 
         # 本月
-        elif time_selection == "本月":
-            url = f"https://astro.click108.com.tw/monthly_{astro_id}.php?iAcDay={today}&iAstro={astro_id}&iType=2"
+            elif time_selection == "本月":
+                url = f"https://astro.click108.com.tw/monthly_{astro_id}.php?iAcDay={today}&iAstro={astro_id}&iType=2"
 
-            response = requests.get(url)
-            response.encoding = "utf-8"
-            soup = BeautifulSoup(response.text, "html.parser")
-            overall = soup.find("span", {"class": "txt_green"}).text.strip()
-            love = soup.find("span", {"class": "txt_pink"}).text.strip()
-            career = soup.find("span", {"class": "txt_blue"}).text.strip()
-            finance = soup.find("span", {"class": "txt_orange"}).text.strip()
-            # 子標題內容
-            all_content = soup.find(
-                "div", {"class": "TODAY_CONTENT"})
-            all_p = all_content.find_all('p')
-            overall_content = all_p[1].text
-            love_tmp = all_p[4:6]
-            love_content = ''
-            for p in love_tmp:
-                print(p.text)
-                love_content += p.text + '\n'
-            career_tmp = all_p[-4:-2]
-            career_content = ''
-            for i in career_tmp:
-                print(i.text)
-                career_content += i.text + '\n'
-            finance_content = all_p[-1].text
+                response = requests.get(url)
+                response.encoding = "utf-8"
+                soup = BeautifulSoup(response.text, "html.parser")
+                overall = soup.find(
+                    "span", {"class": "txt_green"}).text.strip()
+                love = soup.find("span", {"class": "txt_pink"}).text.strip()
+                career = soup.find("span", {"class": "txt_blue"}).text.strip()
+                finance = soup.find(
+                    "span", {"class": "txt_orange"}).text.strip()
+                # 子標題內容
+                all_content = soup.find(
+                    "div", {"class": "TODAY_CONTENT"})
+                all_p = all_content.find_all('p')
+                overall_content = all_p[1].text
+                love_tmp = all_p[4:6]
+                love_content = ''
+                for p in love_tmp:
+                    print(p.text)
+                    love_content += p.text + '\n'
+                career_tmp = all_p[-4:-2]
+                career_content = ''
+                for i in career_tmp:
+                    print(i.text)
+                    career_content += i.text + '\n'
+                finance_content = all_p[-1].text
 
-    # reply_message += f"{reply_content}"
-
-    # message = {
-    #     "type": "text",
-    #     "text": reply_message
-    # }
-
-    message = {
-        "type": "flex",
-        "altText": "星座運勢結果",
-        "contents": {
-            "type": "bubble",
-            "body": {
-                "type": "box",
-                "layout": "vertical",
-                "contents": [
-                    {
-                        "type": "text",
-                        "text": reply_message,
-                        "weight": "bold",
-                        "size": "xl"
-                    },
-                    {
+            message = {
+                "type": "flex",
+                "altText": "星座運勢結果",
+                "contents": {
+                    "type": "bubble",
+                    "body": {
                         "type": "box",
-                        "layout": "baseline",
-                        "margin": "md",
+                        "layout": "vertical",
                         "contents": [
                             {
                                 "type": "text",
-                                "text": overall,
-                                "size": "md",
-                                "color": "#CC7DE6",
+                                "text": reply_message,
                                 "weight": "bold",
-                                "margin": "md",
-                                "flex": 0,
-                                "wrap": True
-                            }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "baseline",
-                        "margin": "md",
-                        "contents": [
+                                "size": "xl"
+                            },
                             {
-                                "type": "text",
-                                "text": overall_content,
-                                "size": "sm",
-                                "color": "#3B3B3B",
+                                "type": "box",
+                                "layout": "baseline",
                                 "margin": "md",
-                                "flex": 0,
-                                "wrap": True
-                            }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "baseline",
-                        "margin": "md",
-                        "contents": [
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": overall,
+                                        "size": "md",
+                                        "color": "#CC7DE6",
+                                        "weight": "bold",
+                                        "margin": "md",
+                                        "flex": 0,
+                                        "wrap": True
+                                    }
+                                ]
+                            },
                             {
-                                "type": "text",
-                                "text": love,
-                                "size": "md",
-                                "color": "#CC7DE6",
-                                "weight": "bold",
+                                "type": "box",
+                                "layout": "baseline",
                                 "margin": "md",
-                                "flex": 0,
-                                "wrap": True
-                            }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "baseline",
-                        "margin": "md",
-                        "contents": [
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": overall_content,
+                                        "size": "sm",
+                                        "color": "#3B3B3B",
+                                        "margin": "md",
+                                        "flex": 0,
+                                        "wrap": True
+                                    }
+                                ]
+                            },
                             {
-                                "type": "text",
-                                "text": love_content.rstrip('\n'),
-                                "size": "sm",
-                                "color": "#3B3B3B",
+                                "type": "box",
+                                "layout": "baseline",
                                 "margin": "md",
-                                "flex": 0,
-                                "wrap": True
-                            }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "baseline",
-                        "margin": "md",
-                        "contents": [
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": love,
+                                        "size": "md",
+                                        "color": "#CC7DE6",
+                                        "weight": "bold",
+                                        "margin": "md",
+                                        "flex": 0,
+                                        "wrap": True
+                                    }
+                                ]
+                            },
                             {
-                                "type": "text",
-                                "text": career,
-                                "size": "md",
-                                "color": "#CC7DE6",
-                                "weight": "bold",
+                                "type": "box",
+                                "layout": "baseline",
                                 "margin": "md",
-                                "flex": 0,
-                                "wrap": True
-                            }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "baseline",
-                        "margin": "md",
-                        "contents": [
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": love_content.rstrip('\n'),
+                                        "size": "sm",
+                                        "color": "#3B3B3B",
+                                        "margin": "md",
+                                        "flex": 0,
+                                        "wrap": True
+                                    }
+                                ]
+                            },
                             {
-                                "type": "text",
-                                "text": career_content.rstrip('\n'),
-                                "size": "sm",
-                                "color": "#262626",
+                                "type": "box",
+                                "layout": "baseline",
                                 "margin": "md",
-                                "flex": 0,
-                                "wrap": True
-                            }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "baseline",
-                        "margin": "md",
-                        "contents": [
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": career,
+                                        "size": "md",
+                                        "color": "#CC7DE6",
+                                        "weight": "bold",
+                                        "margin": "md",
+                                        "flex": 0,
+                                        "wrap": True
+                                    }
+                                ]
+                            },
                             {
-                                "type": "text",
-                                "text": finance,
-                                "size": "md",
-                                "color": "#CC7DE6",
-                                "weight": "bold",
+                                "type": "box",
+                                "layout": "baseline",
                                 "margin": "md",
-                                "flex": 0,
-                                "wrap": True
-                            }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "baseline",
-                        "margin": "md",
-                        "contents": [
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": career_content.rstrip('\n'),
+                                        "size": "sm",
+                                        "color": "#262626",
+                                        "margin": "md",
+                                        "flex": 0,
+                                        "wrap": True
+                                    }
+                                ]
+                            },
                             {
-                                "type": "text",
-                                "text": finance_content,
-                                "size": "sm",
-                                "color": "#262626",
+                                "type": "box",
+                                "layout": "baseline",
                                 "margin": "md",
-                                "flex": 0,
-                                "wrap": True
-                            }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "baseline",
-                        "margin": "md",
-                        "contents": [
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": finance,
+                                        "size": "md",
+                                        "color": "#CC7DE6",
+                                        "weight": "bold",
+                                        "margin": "md",
+                                        "flex": 0,
+                                        "wrap": True
+                                    }
+                                ]
+                            },
                             {
-                                "type": "text",
-                                "text": "資料來源：科技紫微網",
-                                "size": "sm",
-                                "color": "#999999",
+                                "type": "box",
+                                "layout": "baseline",
                                 "margin": "md",
-                                "flex": 0,
-                                "wrap": True
-                            }
-                        ]
-                    },
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": finance_content,
+                                        "size": "sm",
+                                        "color": "#262626",
+                                        "margin": "md",
+                                        "flex": 0,
+                                        "wrap": True
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "box",
+                                "layout": "baseline",
+                                "margin": "md",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "資料來源：科技紫微網",
+                                        "size": "sm",
+                                        "color": "#999999",
+                                        "margin": "md",
+                                        "flex": 0,
+                                        "wrap": True
+                                    }
+                                ]
+                            },
 
-                ]
+                        ]
+                    }
+                }
             }
-        }
-    }
+
     return message

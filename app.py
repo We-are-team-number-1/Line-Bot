@@ -103,11 +103,12 @@ def index():
 
                 # ================== 天氣查詢-天氣預報 ==================
                 elif text == "各縣市天氣查詢":
-                    payload["messages"] = [Weather.reply_weather_table(),Weather.reply_weather_table2()]
+                    payload["messages"] = [
+                        Weather.reply_weather_table(), Weather.reply_weather_table2()]
 
                 elif text == "天氣查詢":
-                    payload["messages"] = [Weather.flx()]                
-                
+                    payload["messages"] = [Weather.flx()]
+
                 # ================== 餐廳查詢-提醒開啟位置 ==================
                 elif text == "請傳送你的位置資訊":
                     payload["messages"] = [
@@ -203,7 +204,6 @@ def index():
 
 
                         ))
-                
 
                 else:
                     payload["messages"] = [
@@ -224,8 +224,6 @@ def index():
                 payload["messages"] = [
                     Restaurant.Restaurant(latitude, longitude)]
                 replyMessage(payload)
-                
-            
 
         # ============ Message type : Postback ============
         elif events[0]["type"] == "postback":
@@ -293,11 +291,6 @@ def index():
                 with open("./json/Astro_data.json", "w") as f:
                     json.dump(json_data, f)
 
-                # print('=================')
-                # print(payload)
-                # print(json_data)
-                # print(userAstro)
-                # print('=================')
                 payload["messages"] = [Astro.reply_time_selecter()]
 
             # ================== 星座運勢查詢 - choose date ====================
@@ -310,10 +303,6 @@ def index():
                 with open("./json/Astro_data.json", "w") as f:
                     json.dump(json_data, f)
 
-                # print("+"*20)
-                # print("ok")
-                # print(json_data)
-                # print("+"*20)
                 payload["messages"] = [Astro.reply_result_message()]
 
             replyMessage(payload)
