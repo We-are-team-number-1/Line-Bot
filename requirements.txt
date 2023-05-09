@@ -2,3 +2,4 @@ gunicorn
 line-bot-sdk
 Flask
 audioread
+bs4==0.0.1
