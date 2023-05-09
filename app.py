@@ -119,7 +119,7 @@ def index():
                                     {
                                         "action": {
                                             "type": "location",
-                                            "label": "位置資訊"
+                                            "label": "位置資訊111"
                                         }
                                     }
                                 ]
