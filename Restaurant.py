@@ -71,8 +71,11 @@ def Restaurant(latitude, longitude):
         details_results = requests.get(details_url)
         details_dict = details_results.json()
         # details_restaurants = details_dict["result"]
-        phone_number.append(details_dict["result"]["formatted_phone_number"].replace(
-            " ", ""))
+        if details_dict["result"]["formatted_phone_number"] is None:
+            phone_number.append(0)
+        else:
+            phone_number.append(details_dict["result"]["formatted_phone_number"].replace(
+                " ", ""))
 
         # print(details_restaurants)
         # print(phone_number)
