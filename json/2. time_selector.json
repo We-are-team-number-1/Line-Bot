@@ -1,6 +1,6 @@
 {
     "type": "template",
-    "altText": "請選擇要查詢的時段",
+    "altText": "Life4Ü傳了訊息給你",
     "template": {
         "type": "buttons",
         "imageAspectRatio": "rectangle",

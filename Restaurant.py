@@ -110,7 +110,7 @@ def Restaurant(latitude, longitude):
 
     message = {
         "type": "template",
-        "altText": "this is a carousel template",
+        "altText": "Life4Ü傳了訊息給你",
         "template": {
             "type": "carousel",
             "imageAspectRatio": "rectangle",
